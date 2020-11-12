@@ -1,9 +1,15 @@
 import fetch from 'node-fetch'
+import configData from 'src/../../wp.config.json'
 
-const baseUrl = `${process.env.WP_URL}`
+const baseUrl = configData.site_url
 
-export const posts = async () => {
-  const response = await fetch(`${baseUrl}/posts`)
+export const posts = async ({ offset }) => {
+  const offsetValue = offset ? offset : 0
+  const response = await fetch(
+    `${baseUrl}/posts?per_page=${
+      configData.posts_per_page + 1
+    }&offset=${offsetValue}`
+  )
   const json = await response.json()
 
   return JSON.stringify(json)

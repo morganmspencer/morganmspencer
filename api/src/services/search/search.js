@@ -1,6 +1,7 @@
 import fetch from 'node-fetch'
+import configData from 'src/../../wp.config.json'
 
-const baseUrl = `${process.env.WP_URL}`
+const baseUrl = configData.site_url
 
 export const search = async ({ query }) => {
   const response = await fetch(

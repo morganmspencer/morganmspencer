@@ -8,7 +8,7 @@ export const schema = gql`
   }
 
   type Query {
-    posts: String!
+    posts(offset: Int): String!
     postsByCategory(id: Int): String!
     postsByCategory(slug: String): String!
     postBySlug(slug: String!): String!
