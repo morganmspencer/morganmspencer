@@ -1,17 +1,14 @@
-import { Link, routes } from '@redwoodjs/router'
+import { useParams } from '@redwoodjs/router'
+import configData from 'src/../../wp.config.json'
 import MainLayout from 'src/layouts/MainLayout'
+import PostsCell from 'src/components/PostsCell'
 
 const HomePage = () => {
+  const { page } = useParams()
+  var pageOffset = page ? (page - 1) * configData.posts_per_page : 0
   return (
     <MainLayout>
-      <h1>HomePage</h1>
-      <p>
-        Find me in <code>./web/src/pages/HomePage/HomePage.js</code>
-      </p>
-      <p>
-        My default route is named <code>home</code>, link to me with `
-        <Link to={routes.home()}>Home</Link>`
-      </p>
+      <PostsCell offset={pageOffset} />
     </MainLayout>
   )
 }

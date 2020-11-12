@@ -61,6 +61,28 @@ header .category-nav a {
   @apply block py-2 px-3 shadow-none transition-colors duration-300 hover:bg-white hover:bg-opacity-80 hover:shadow-none focus:shadow-none;
 }
 
+.post-grid {
+  @apply grid gap-8 grid-cols-6;
+}
+
+.post-grid > * {
+  @apply col-span-6 row-span-1 md-dual:col-span-3 md-dual:row-span-1 lg-dual:col-span-2 lg-dual:row-span-1 xl-dual:col-span-1 xl-dual:row-span-1;
+}
+
+.post-grid > *:nth-child(3n+1) {
+  @apply md-dual:col-span-6 md-dual:row-span-1;
+}
+
+.post-grid > *:nth-child(6n+1),
+.post-grid > *:nth-child(6n+5) {
+  @apply lg-dual:col-span-4 lg-dual:row-span-2;
+}
+
+.post-grid > *:nth-child(14n+1),
+.post-grid > *:nth-child(11n+11) {
+  @apply xl-dual:col-span-3 xl-dual:row-span-2;
+}
+
 footer .category-nav ul {
   @apply flex flex-wrap gap-4;
 }
