@@ -23,10 +23,7 @@ export const Success = ({ categories }) => {
         (category, id) =>
           category.count > 0 && (
             <li key={id}>
-              <Link
-                to={routes.category({ slug: category.slug })}
-                className="block py-2 px-3 text-sm uppercase font-semibold shadow-none transition-colors duration-300 hover:bg-white hover:bg-opacity-80 hover:shadow-none focus:shadow-none"
-              >
+              <Link to={routes.category({ slug: category.slug })}>
                 {category.name}
               </Link>
             </li>
