@@ -38,6 +38,16 @@ module.exports = {
       'screen-3/4': '75vh',
       screen: '100vh',
     },
+    screens: {
+      sm: { min: '640px' },
+      md: { min: '768px' },
+      lg: { min: '1024px' },
+      xl: { min: '1280px' },
+      'sm-dual': { min: '640px', max: '767px' },
+      'md-dual': { min: '768px', max: '1023px' },
+      'lg-dual': { min: '1024px', max: '1279px' },
+      'xl-dual': { min: '1280px' },
+    },
     extend: {
       colors: {
         neon: '#75ff8d',
