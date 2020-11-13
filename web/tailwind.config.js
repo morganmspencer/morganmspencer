@@ -54,6 +54,12 @@ module.exports = {
         light: '#d8d8d8',
         dark: '#282828',
       },
+      height: {
+        '1/2': '50%',
+      },
+      inset: {
+        full: '100%',
+      },
       margin: {
         '-wrap': '-5.62vw',
         wrap: '5.62vw',

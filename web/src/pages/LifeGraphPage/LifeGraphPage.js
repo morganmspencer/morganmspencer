@@ -31,10 +31,68 @@ const BranchItem = (props) => {
   )
 }
 
+const CommitItem = (props) => {
+  return (
+    <>
+      <div className={props.one}></div>
+      <div className={props.two}></div>
+      <div className={props.three}></div>
+      <div className={props.four}></div>
+      <div>{props.children}</div>
+    </>
+  )
+}
+
+const CommitSpacer = (props) => {
+  return (
+    <>
+      <div className="line-y line-light"></div>
+      <div className={props.two}></div>
+      <div className={props.three}></div>
+      <div className={props.four}></div>
+      <div>{props.children}</div>
+    </>
+  )
+}
+
+const CommitStart = (props) => {
+  return (
+    <>
+      <div
+        className={`line-y line-light line-start-begin line-${props.lineColor}-back`}
+      ></div>
+      <div
+        className={
+          props.depth === 2
+            ? `line-start-end`
+            : `line-x line-${props.lineColor}`
+        }
+      ></div>
+      <div
+        className={
+          props.depth === 3
+            ? `line-start-end`
+            : `line-x line-${props.lineColor}`
+        }
+      ></div>
+      <div
+        className={
+          props.depth === 4
+            ? `line-start-end line-${props.lineColor}`
+            : props.four
+            ? props.four
+            : ''
+        }
+      ></div>
+      <div>{props.children}</div>
+    </>
+  )
+}
+
 const LifeGraphPage = () => {
   return (
     <ResumeLayout>
-      <div id="life-graph">
+      {/* <div id="life-graph">
         <ul className="graph-data">
           <li>init Morgan Spencer</li>
           <li>add childhood</li>
@@ -74,17 +132,17 @@ const LifeGraphPage = () => {
               the design industry.
             </p>
           </BranchItem>
-          <BranchItem index="ex-2" reference="end">
+          <BranchItem index="ex-2" reference="end" level="2">
             leave SLANT Media
           </BranchItem>
           <BranchItem index="ex-1" reference="mid" level="3">
             promoted to Assistant Manager
           </BranchItem>
           <li>2015</li>
-          <BranchItem index="ex-1" reference="end">
+          <BranchItem index="ex-1" reference="end" level="3">
             leave Office of Information Technology
           </BranchItem>
-          <BranchItem index="ed-1" reference="end">
+          <BranchItem index="ed-1" reference="end" level="4">
             graduate from Philadelphia University
           </BranchItem>
           <BranchItem
@@ -94,7 +152,7 @@ const LifeGraphPage = () => {
             detailTitle="start at Sylogent"
           ></BranchItem>
           <li>2016</li>
-          <BranchItem index="ex-3" reference="end">
+          <BranchItem index="ex-3" reference="end" level="2">
             leave Sylogent
           </BranchItem>
           <BranchItem
@@ -110,7 +168,7 @@ const LifeGraphPage = () => {
             level="3"
             detailTitle="found Spencer Creative Co."
           ></BranchItem>
-          <BranchItem index="ex-4" reference="end">
+          <BranchItem index="ex-4" reference="end" level="2">
             leave CBC Industries
           </BranchItem>
           <li>2018</li>
@@ -130,10 +188,43 @@ const LifeGraphPage = () => {
           ></BranchItem>
           <li>2019</li>
           <li>2020</li>
-          <BranchItem index="ed-2" reference="end">
-            leave CBC Industries
+          <BranchItem index="ed-2" reference="end" level="2">
+            graduate The Citadel
           </BranchItem>
         </ul>
+      </div> */}
+      <div id="life-graph-grid">
+        <CommitItem one="commit-marker line-light">
+          init Morgan Spencer
+        </CommitItem>
+        <CommitSpacer />
+        <CommitItem one="commit-marker line-light">add childhood</CommitItem>
+        <CommitSpacer />
+        <CommitItem one="commit-marker line-light">
+          add kindergarten through high school
+        </CommitItem>
+        <CommitSpacer />
+        <CommitItem one="commit-marker line-light">2011</CommitItem>
+        <CommitStart depth={4} lineColor="primary" />
+        <CommitItem one="line-y line-light" four="commit-marker line-primary">
+          start at Philadelphia University
+        </CommitItem>
+        <CommitSpacer four="line-y line-primary" />
+        <CommitItem one="commit-marker line-light" four="line-y line-primary">
+          2012
+        </CommitItem>
+        <CommitStart
+          depth={3}
+          lineColor="secondary"
+          four="line-y line-primary"
+        />
+        <CommitItem
+          one="line-y line-light"
+          three="commit-marker line-secondary"
+          four="line-y line-primary"
+        >
+          start at Office of Information Technology
+        </CommitItem>
       </div>
     </ResumeLayout>
   )

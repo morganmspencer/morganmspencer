@@ -78,9 +78,18 @@ header.bg-cover:before {
   @apply md-dual:col-span-6 md-dual:row-span-1;
 }
 
+.post-grid > *:nth-child(3n+1) .featured-image {
+  @apply md-dual:h-72;
+}
+
 .post-grid > *:nth-child(6n+1),
 .post-grid > *:nth-child(6n+5) {
   @apply lg-dual:col-span-4 lg-dual:row-span-2;
+}
+
+.post-grid > *:nth-child(6n+1) .featured-image,
+.post-grid > *:nth-child(6n+5) .featured-image {
+  @apply lg-dual:h-96;
 }
 
 .post-grid > *:nth-child(14n+1),
@@ -96,6 +105,248 @@ header.bg-cover:before {
 .entry-content > * {
   @apply mb-8;
 }
+
+.post-grid > *:nth-child(14n+1) .featured-image,
+.post-grid > *:nth-child(11n+11) .featured-image {
+  @apply xl:h-96;
+}
+
+#life-graph {
+  @apply text-white text-2xl;
+}
+
+#life-graph .graph-data {
+  @apply relative;
+}
+
+#life-graph .graph-data:before {
+  content: '';
+  left: calc(.625rem - 2px);
+  @apply h-full absolute border-l-4 border-light border-solid;
+}
+
+#life-graph .graph-data > li {
+  @apply my-4;
+}
+
+#life-graph details summary {
+  @apply flex items-center gap-4;
+}
+
+#life-graph details > div {
+  @apply text-lg;
+}
+
+#life-graph ul,
+#life-graph li {
+  @apply relative;
+}
+
+#life-graph li[data-level] ul:before {
+  content: '';
+  left: .5rem;
+  @apply h-full absolute top-0 bottom-0 border-l-4 border-solid border-light;
+}
+
+#life-graph li[data-index^="ed-"]:not([data-reference="end"]) ul:before {
+  @apply border-primary;
+}
+
+#life-graph li[data-index^="ex-"]:not([data-reference="end"]) ul:before {
+  @apply border-secondary;
+}
+
+#life-graph ul > li:not([data-reference]),
+#life-graph li[data-reference="end"] ul li {
+  padding-left: 8rem;
+}
+
+#life-graph li[data-reference="start"]:before {
+  content: '';
+  height: 40px;
+  right: calc(100% - 12px);
+  @apply absolute bottom-full border-t-4 border-r-4 border-light rounded-tr-full;
+}
+
+#life-graph li[data-reference="end"]:before {
+  content: '';
+  height: 40px;
+  left: calc(1rem - 4px);
+  bottom: calc(100% - .75rem);
+  @apply absolute border-b-4 border-r-4 border-light rounded-br-full;
+}
+
+#life-graph li[data-reference="start"][data-index^="ed-"]:before,
+#life-graph li[data-reference="end"][data-index^="ed-"]:before {
+  @apply border-primary;
+}
+
+#life-graph li[data-reference="start"][data-index^="ex-"]:before,
+#life-graph li[data-reference="end"][data-index^="ex-"]:before {
+  @apply border-secondary;
+}
+
+#life-graph li[data-level="2"]:not([data-reference="end"]) {
+  margin-left: 2rem;
+}
+
+#life-graph li[data-level="2"][data-reference="start"]:before,
+#life-graph li[data-level="2"][data-reference="end"]:before {
+  @apply w-8;
+}
+
+#life-graph li[data-level="2"]:not([data-reference="end"]) ul li {
+  padding-left: 6rem;
+}
+
+#life-graph li[data-level="3"]:not([data-reference="end"]) {
+  margin-left: 4rem;
+}
+
+#life-graph li[data-level="3"][data-reference="start"]:before,
+#life-graph li[data-level="3"][data-reference="end"]:before {
+  @apply w-16;
+}
+
+#life-graph li[data-level="3"]:not([data-reference="end"]) ul li {
+  padding-left: 4rem;
+}
+
+#life-graph li[data-level="4"]:not([data-reference="end"]) {
+  margin-left: 6rem;
+}
+
+#life-graph li[data-level="4"][data-reference="start"]:before,
+#life-graph li[data-level="4"][data-reference="end"]:before {
+  @apply w-24;
+}
+
+#life-graph li[data-level="4"]:not([data-reference="end"]) ul li {
+  padding-left: 2rem;
+}
+
+#life-graph li:after {
+  content: '';
+  @apply block absolute left-0 top-0 rounded-full h-5 w-5 bg-dark border-4 border-solid border-light z-20;
+}
+
+#life-graph li[data-index] ul li {
+  @apply flex items-start;
+}
+
+#life-graph li[data-index]:after {
+  content: none;
+}
+
+#life-graph li[data-index] ul li:before {
+  @apply text-white inline-block border border-solid rounded-md p-1 text-xs mr-2;
+}
+
+#life-graph li[data-index^="ed-"]:not([data-reference="end"]) ul li:after {
+  @apply border-primary;
+}
+
+#life-graph li[data-index^="ed-"] ul li:before {
+  content: 'education';
+  @apply border-primary bg-primary bg-opacity-10;
+}
+
+#life-graph li[data-index^="ex-"]:not([data-reference="end"]) ul li:after {
+  @apply border-secondary;
+}
+
+#life-graph li[data-index^="ex-"] ul li:before {
+  content: 'experience';
+  @apply border-secondary bg-secondary bg-opacity-10;
+}
+
+#life-graph li[data-reference="end"] ul li {
+  @apply text-light;
+}
+
+/*---------- New Grid test ----------*/
+
+#life-graph-grid {
+  grid-template-columns: repeat(4, auto) 1fr;
+  @apply grid w-full;
+}
+
+#life-graph-grid > div {
+  min-height: 20px;
+  min-width: 20px;
+  @apply flex items-center justify-center relative;
+}
+
+#life-graph-grid .commit-marker:before {
+  content: '';
+  @apply h-5 w-5 border-4 rounded-full border-solid static z-30 bg-dark;
+}
+
+#life-graph-grid .commit-marker:after {
+  content: '';
+  left: .5rem;
+  @apply h-full w-full absolute border-l-4 border-solid z-0;
+}
+
+#life-graph-grid .commit-marker.line-light:after {
+  @apply border-light;
+}
+
+#life-graph-grid .commit-marker.line-primary:after {
+  @apply border-primary;
+}
+
+#life-graph-grid .commit-marker.line-secondary:after {
+  @apply border-secondary;
+}
+
+#life-graph-grid .line-light,
+#life-graph-grid .line-light:before,
+#life-graph-grid .line-light-back:after {
+  content: '';
+  @apply border-light;
+}
+
+#life-graph-grid .line-primary,
+#life-graph-grid .line-primary:before,
+#life-graph-grid .line-primary-back:after {
+  content: '';
+  @apply border-primary;
+}
+
+#life-graph-grid .line-secondary,
+#life-graph-grid .line-secondary:before,
+#life-graph-grid .line-secondary-back:after {
+  content: '';
+  @apply border-secondary;
+}
+
+#life-graph-grid .line-x:before {
+  content: '';
+  @apply border-t-4 border-solid w-full;
+}
+
+#life-graph-grid .line-y:before {
+  content: '';
+  min-height: 20px;
+  @apply border-l-4 border-solid h-full;
+}
+
+#life-graph-grid .line-start-begin:after {
+  content: '';
+  height: calc(50% + 2px);
+  width: calc(50% + 2px);
+  @apply absolute top-0 right-0 border-l-4 border-b-4 rounded-bl-full border-solid;
+}
+
+#life-graph-grid .line-start-end:before {
+  content: '';
+  height: calc(50% + 2px);
+  width: calc(50% + 2px);
+  @apply absolute bottom-0 left-0 border-r-4 border-t-4 rounded-tr-full border-solid;
+}
+
+/*-----------------------------------*/
 
 footer .category-nav ul {
   @apply flex flex-wrap gap-4;
