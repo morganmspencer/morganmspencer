@@ -17,7 +17,9 @@ export const posts = async ({ offset }) => {
 
 export const postsByCategory = async ({ id, slug }) => {
   const response = await fetch(
-    `${baseUrl}/posts?filter${id ? '[cat]=' + id : '[category_slug]=' + slug}`
+    `${baseUrl}/posts?per_page=${configData.posts_per_page + 1}&filter${
+      id ? '[cat]=' + id : '[category_slug]=' + slug
+    }`
   )
   const json = await response.json()
 
