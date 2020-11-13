@@ -53,6 +53,7 @@ module.exports = {
         neon: '#75ff8d',
         sky: '#74f2f7',
         stone: '#d8d8d8',
+        slate: '#282828',
       },
       margin: {
         '-wrap': '-5.62vw',
