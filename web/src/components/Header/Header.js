@@ -24,7 +24,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <nav className="category-nav -mx-wrap px-wrap bg-gradient-to-r from-neon to-sky">
+      <nav className="category-nav -mx-wrap px-wrap bg-gradient-to-r from-primary to-secondary">
         <ul className="flex flex-wrap text-sm uppercase font-semibold">
           <CategoriesCell />
         </ul>

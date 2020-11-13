@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply h-full min-h-screen font-sans overflow-x-hidden text-slate;
+  @apply h-full min-h-screen font-sans overflow-x-hidden text-dark;
 }
 
 #redwood-app {
@@ -46,7 +46,7 @@ h6 {
 
 a,
 button {
-  box-shadow: inset 0 -3px 0 theme('colors.neon');
+  box-shadow: inset 0 -3px 0 theme('colors.primary');
   transition: box-shadow .3s ease;
 }
 
@@ -54,7 +54,7 @@ a:hover,
 a:focus,
 button:hover,
 button:focus {
-  box-shadow: inset 0 -6px 0 theme('colors.sky');
+  box-shadow: inset 0 -6px 0 theme('colors.secondary');
 }
 
 header .category-nav a {
@@ -63,7 +63,7 @@ header .category-nav a {
 
 header.bg-cover:before {
   content: '';
-  @apply absolute top-0 left-0 h-full w-full bg-slate opacity-90 z-10;
+  @apply absolute top-0 left-0 h-full w-full bg-dark opacity-90 z-10;
 }
 
 .post-grid {

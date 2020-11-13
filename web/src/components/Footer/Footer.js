@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       role="contentinfo"
-      className="px-wrap pt-8 pb-2 bg-gradient-to-r from-neon to-sky text-center"
+      className="px-wrap pt-8 pb-2 bg-gradient-to-r from-primary to-secondary text-center"
     >
       <div>
         <Link

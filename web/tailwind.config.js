@@ -46,14 +46,13 @@ module.exports = {
       'sm-dual': { min: '640px', max: '767px' },
       'md-dual': { min: '768px', max: '1023px' },
       'lg-dual': { min: '1024px', max: '1279px' },
-      'xl-dual': { min: '1280px' },
     },
     extend: {
       colors: {
-        neon: '#75ff8d',
-        sky: '#74f2f7',
-        stone: '#d8d8d8',
-        slate: '#282828',
+        primary: '#75ff8d',
+        secondary: '#74f2f7',
+        light: '#d8d8d8',
+        dark: '#282828',
       },
       margin: {
         '-wrap': '-5.62vw',
