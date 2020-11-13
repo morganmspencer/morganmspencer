@@ -1,17 +1,10 @@
-import { Link, routes } from '@redwoodjs/router'
 import MainLayout from 'src/layouts/MainLayout'
+import CategoryCell from 'src/components/CategoryCell'
 
-const CategoryPage = () => {
+const CategoryPage = ({ slug }) => {
   return (
     <MainLayout>
-      <h1>CategoryPage</h1>
-      <p>
-        Find me in <code>./web/src/pages/CategoryPage/CategoryPage.js</code>
-      </p>
-      <p>
-        My default route is named <code>category</code>, link to me with `
-        <Link to={routes.category()}>Category</Link>`
-      </p>
+      <CategoryCell slug={slug} />
     </MainLayout>
   )
 }
