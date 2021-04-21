@@ -12,7 +12,7 @@ Full Stack Developer with experience building websites and web applications. Spe
 
 ## Connect
 
-[![Website Badge](https://img.shields.io/badge/-morganmspencer.com-22223B?style=flat-square&logo=Google-Chrome&logoColor=white&link=https://morganmspencer.com)](https://thyresson.io)
+[![Website Badge](https://img.shields.io/badge/-morganmspencer.com-22223B?style=flat-square&logo=Google-Chrome&logoColor=white&link=https://morganmspencer.com)](https://morganmspencer.com)
 [![Linkedin Badge](https://img.shields.io/badge/-morganmspencer-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/morganmspencer/)](https://www.linkedin.com/in/morganmspencer)
 [![Twitter Badge](https://img.shields.io/badge/-@morganmspencer-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/morganmspencer)](https://twitter.com/morganmspencer)
 
