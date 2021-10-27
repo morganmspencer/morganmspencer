@@ -8,7 +8,7 @@ Full Stack Developer with experience building websites and web applications. Spe
 - 🧒 New Hampshire raised
 - 👨‍🎓 Philadelphia educated
 - 👫 Charleston, SC living
-- 🏢 Currently working at [The Citadel](https://citadel.edu)
+- 🏢 Currently working at [Booz Allen Hamilton](https://www.boozallen.com/)
 
 ## Connect
 
